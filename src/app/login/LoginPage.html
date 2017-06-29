@@ -1,0 +1,46 @@
+<div class="header">
+    <h5>
+        Sign document using
+    </h5>
+    <h6>
+        sanket@digio.in
+    </h6>
+</div>
+
+<div class="body">
+    <p>
+        sanket@digio.in uses GMAIL?
+        <br/>
+        login using google
+    </p>
+    <button type="button" class="btn btn-default btn-google " id="btn-google">
+        <i class="fa fa-google-plus"></i> Google
+    </button>
+    <p class="otherOptions">
+        <span>OR</span>
+    </p>
+    <p>
+        Proceed with your email address
+    </p>
+    <input type="email" (change)="onChangeEmail($event.target.value)"/>
+    <div>{{loginState?.errors?.email}}</div>        
+    <p>
+        By continuing, I confirm to Terms and Services and Privacy Policy of 
+        <a href="https://www.digio.in/">Digio.in</a>
+    </p>
+    <button type="button"
+                    class="btn btn-primary" 
+                    (click)="onLogin()">
+                    Continue
+    </button>
+</div>
+
+
+<div class="footer">
+    <p>
+        Powered by 
+        <br/>
+        <a href="https://www.digio.in/">www.digio.in</a>
+    </p>
+
+</div>

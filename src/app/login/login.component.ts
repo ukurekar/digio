@@ -8,29 +8,30 @@ import { Router }  from '@angular/router';
   selector: 'about',
   styles: [`
   `],
-  template: `
-    <div class="container-fluid">
-        <div class="row">
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+//   template: `
+//     <div class="container-fluid">
+//         <div class="row">
+//         </div>
+//         <div class="row">
+//             <div class="col-md-12">
 
-            </div>
-        </div>            
-        <div class="row">
-            <div class="col-md-12">
-                <input type="text"
-                    (change)="onChangeEmail($event.target.value)"/>
-                <div>{{loginState?.errors?.email}}</div>                    
-                <button type="button"
-                    class="btn btn-primary" 
-                    (click)="onLogin()">
-                    Continue
-                </button>
-            </div>
-        </div>            
-    </div>            
-  `
+//             </div>
+//         </div>            
+//         <div class="row">
+//             <div class="col-md-12">
+//                 <input type="text"
+//                     (change)="onChangeEmail($event.target.value)"/>
+//                 <div>{{loginState?.errors?.email}}</div>                    
+//                 <button type="button"
+//                     class="btn btn-primary" 
+//                     (click)="onLogin()">
+//                     Continue
+//                 </button>
+//             </div>
+//         </div>            
+//     </div>            
+//   `
+    templateUrl: 'LoginPage.html'
 })
 export class LoginComponent implements OnInit {
 
