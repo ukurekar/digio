@@ -9,21 +9,7 @@ import { RegisterComponent, RegisterContent } from '../register/register.compone
   selector: 'about',
   styles: [`
   `],
-  template: `
-    <div class="container-fluid">        
-        <div class="row">
-            <div class="col-md-12">
-                <ng-template ngbModalContainer></ng-template>
-                <register (onRegister)="onRegister($event)">                    
-                </register>
-                Main Page
-            </div>
-        </div>    
-        <ngb-alert 
-            [type]="success"
-            *ngIf="mainState?.isRegistered">Aadhar verified successfully</ngb-alert>    
-    </div>            
-  `
+  templateUrl: './main.component.html'
 })
 export class MainComponent implements OnInit {
 
@@ -39,13 +25,13 @@ export class MainComponent implements OnInit {
 
   constructor(private registerModal:NgbModal) {
 
-  }  
+  }
 
   ngOnInit() {
 
   }
 
-  onRegister(message: any) {      
+  onRegister(message: any) {
     this.mainState.isRegistered = true;
     setTimeout(() => {
         this.mainState.isRegistered = false;
